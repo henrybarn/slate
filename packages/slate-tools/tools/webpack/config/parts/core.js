@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SlateConfig = require('@shopify/slate-config');
@@ -15,7 +15,8 @@ module.exports = {
   context: config.get('paths.theme.src'),
 
   output: {
-    filename: '[name].js',
+    // Removed for new Clean Webpack Plugin
+    // filename: '[name].js',
     path: config.get('paths.theme.dist.assets'),
     jsonpFunction: 'shopifySlateJsonp',
   },
@@ -69,9 +70,7 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
-      root: config.get('paths.theme'),
-    }),
+    new CleanWebpackPlugin(),
 
     extractLiquidStyles,
 
@@ -110,6 +109,21 @@ module.exports = {
     new SlateSectionsPlugin({
       from: config.get('paths.theme.src.sections'),
       to: config.get('paths.theme.dist.sections'),
+    }),
+
+    new SlateSectionsPlugin({
+      from: config.get('paths.theme.src.frame'),
+      to: config.get('paths.theme.dist.frame'),
+    }),
+
+    new SlateSectionsPlugin({
+      from: config.get('paths.theme.src.content'),
+      to: config.get('paths.theme.dist.content'),
+    }),
+
+    new SlateSectionsPlugin({
+      from: config.get('paths.theme.src.pages'),
+      to: config.get('paths.theme.dist.pages'),
     }),
   ],
 };
