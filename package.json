@@ -10,7 +10,7 @@
     "theme",
     "CLI"
   ],
-  "engine": ">=8.9.4",
+  "engine": ">=11.10.1",
   "homepage": "https://github.com/henrybarn/slate/",
   "bugs": "https://github.com/Shopify/slate/issues",
   "license": "MIT",
