@@ -10,12 +10,12 @@
     "CLI"
   ],
   "engine": ">=8.9.4",
-  "homepage": "https://shopify.github.io/slate/",
+  "homepage": "https://github.com/henrybarn/slate/",
   "bugs": "https://github.com/Shopify/slate/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/slate.git"
+    "url": "https://github.com/henrybarn/slate.git"
   },
   "scripts": {
     "test": "jest --silent",
