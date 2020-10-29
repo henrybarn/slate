@@ -49,6 +49,7 @@ function _generateConfigFlags() {
     themeId: slateEnv.getThemeIdValue(),
     store: slateEnv.getStoreValue(),
     env: slateEnv.getEnvNameValue(),
+    allowLive: true,
   };
   if (slateEnv.getTimeoutValue()) {
     flags.timeout = slateEnv.getTimeoutValue();

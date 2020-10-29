@@ -17,9 +17,7 @@ module.exports = class sectionsPlugin {
   }
 
   apply(compiler) {
-    if (fs.existsSync(this.options.from)) {
-      compiler.hooks.emit.tapPromise(PLUGIN_NAME, this.addLocales.bind(this));
-    }
+    compiler.hooks.emit.tapPromise(PLUGIN_NAME, this.addLocales.bind(this));
   }
 
   async addLocales(compilation) {
@@ -28,6 +26,7 @@ module.exports = class sectionsPlugin {
 
     // Add sections folder to webpack context
     compilation.contextDependencies.add(this.options.from);
+    console.log(this);
 
     return Promise.all(
       files.map(async (file) => {

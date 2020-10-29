@@ -104,6 +104,10 @@ module.exports = {
         from: config.get('paths.theme.src.templates'),
         to: config.get('paths.theme.dist.templates'),
       },
+      /* {
+        from: config.get('paths.theme.src.pages'),
+        to: config.get('paths.theme.dist.pages'),
+      }, */
     ]),
 
     new SlateSectionsPlugin({
@@ -111,7 +115,7 @@ module.exports = {
       to: config.get('paths.theme.dist.sections'),
     }),
 
-    new SlateSectionsPlugin({
+    /* new SlateSectionsPlugin({
       from: config.get('paths.theme.src.frame'),
       to: config.get('paths.theme.dist.frame'),
     }),
@@ -119,11 +123,6 @@ module.exports = {
     new SlateSectionsPlugin({
       from: config.get('paths.theme.src.content'),
       to: config.get('paths.theme.dist.content'),
-    }),
-
-    new SlateSectionsPlugin({
-      from: config.get('paths.theme.src.pages'),
-      to: config.get('paths.theme.dist.pages'),
-    }),
+    }), */
   ],
 };
