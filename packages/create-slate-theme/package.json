@@ -1,6 +1,6 @@
 {
   "name": "create-slate-theme",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.2-beta.0",
   "description": "Create a new slate project from an existing slate theme repo",
   "main": "index.js",
   "author": "Shopify Inc.",
@@ -15,7 +15,7 @@
     "create-slate-theme": "./index.js"
   },
   "dependencies": {
-    "@shopify/slate-env": "1.0.1-beta.0",
+    "@shopify/slate-env": "1.0.2-beta.0",
     "chalk": "^3.0.0",
     "commander": "^4.1.1",
     "execa": "^4.0.0",
